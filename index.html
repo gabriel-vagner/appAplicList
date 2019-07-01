@@ -6,13 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="/estilo/style.css">
+    <link rel="stylesheet" href="estilo/style.css">
     <script src="scripts/script.js"></script>
 </head>
 
 <body>
-    <table>
+    <h1>Cadastro de Livros</h1>
+    <input type="text" placeholder="Nome" id="nome">
+    <input type="text" placeholder="N° de Páginas" id="pagina">
+    <input type="text" placeholder="Gênero" id="genero">
+    <button onclick="adicionar()">Inserir</button>
+    <table id="tabela">
         
+        <tr>
+            <th>Nome da Obra</th>
+            <th>N° de Páginas</th>
+            <th>Gênero</th>
+        </tr>
 
 
     </table>
