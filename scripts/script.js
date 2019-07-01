@@ -1,3 +1,23 @@
+class Livro{
+    constructor(n, p, g){
+        this.Nome = n;
+        this.Pagina = p;
+        this.Genero = g;
+    }
+
+    getNome(){
+        return this.Nome;
+    }
+    getPagina(){
+        return this.Pagina;
+    }
+    getGenero(){
+        return this.Genero;
+    }
+}
+
+
+
 var idi = 0;
 function adicionar() {
     var table = document.querySelector('#tabela');
@@ -9,12 +29,15 @@ function adicionar() {
     var linha = document.createElement('tr');
     linha.setAttribute('id', idi);
     
+    var novoLivro = new Livro(inputNome.value, inputPagina.value, inputGenero.value);
+    console.log(novoLivro);
+
     var conN = document.createElement('td');
-    conN.appendChild(document.createTextNode(inputNome.value));
+    conN.appendChild(document.createTextNode(novoLivro.getNome()));
     var conP = document.createElement('td');
-    conP.appendChild(document.createTextNode(inputPagina.value));
+    conP.appendChild(document.createTextNode(novoLivro.getPagina()));
     var conG = document.createElement('td');
-    conG.appendChild(document.createTextNode(inputGenero.value));
+    conG.appendChild(document.createTextNode(novoLivro.getGenero()));
 
     var excluir = document.createElement('td');
     var botao = document.createElement('button');
