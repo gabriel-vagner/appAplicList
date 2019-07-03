@@ -15,9 +15,10 @@ class Livro {
         return this.Genero;
     }
 }
-var idi = JSON.parse(localStorage.getItem("idolos"));
+localStorage.getItem('idolos')?console.log():localStorage.setItem('idolos', 0);
+var idi = JSON.parse(localStorage.getItem("idolos")); ;
 
-function restore() { 
+function restore() {
     for (let i = 0; i < idi; i++) {
         if (localStorage.getItem(i)) {
             var table = document.querySelector('table');
@@ -47,6 +48,7 @@ function restore() {
             table.appendChild(linha);
         }
     }
+    
 }
 function adicionar() {
     var table = document.querySelector('#tabela');
@@ -85,7 +87,7 @@ function adicionar() {
 
     localStorage.setItem(idi, JSON.stringify(novoLivro));
     idi++;
-    localStorage.setItem('idolos', JSON.stringify(idi));
+    localStorage.setItem('idolos', idi);
 }
 function excluir(i) {
     var table = document.querySelector('#tabela');
