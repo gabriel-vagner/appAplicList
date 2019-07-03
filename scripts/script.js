@@ -22,11 +22,14 @@ var idi = JSON.parse(localStorage.getItem("idolos"));
 
 function restore() {
 for (let i = 0; i < idi ; i++) {
-    if (i == localStorage) {
-        
+        console.log("exe");
+    if (localStorage.getItem(i)) {
+        console.log("achei");
     }
-}   
+}  
+
 }
+restore();
 function adicionar() {
     var table = document.querySelector('#tabela');
     
