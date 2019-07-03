@@ -18,7 +18,15 @@ class Livro{
 
 
 
-var idi = 0;
+var idi = JSON.parse(localStorage.getItem("idolos"));
+
+function restore() {
+for (let i = 0; i < idi ; i++) {
+    if (i == localStorage) {
+        
+    }
+}   
+}
 function adicionar() {
     var table = document.querySelector('#tabela');
     
@@ -55,10 +63,15 @@ function adicionar() {
     inputNome.value = '';
     inputPagina.value = '';
     inputGenero.value = '';
+
+    localStorage.setItem(idi, JSON.stringify(novoLivro));
+    //localStorage.setItem('idolos', JSON.stringify(0));
     idi++;
+    localStorage.setItem('idolos', JSON.stringify(idi));
 }
 function excluir(i) {
     var table = document.querySelector('#tabela');
     var linhaE = document.getElementById(i);
     table.removeChild(linhaE);
+    localStorage.removeItem(i);
 }
