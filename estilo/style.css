@@ -1,0 +1,31 @@
+ * {
+font-family: Arial, Helvetica, sans-serif;
+background-color: slategray
+
+
+
+
+}
+
+form > input {
+    position: relative;
+  }
+  form > input > ::placeholder {
+    position: absolute;
+  }
+
+
+
+::placeholder{ 
+
+    color:black;
+
+
+
+
+
+
+
+
+
+}
